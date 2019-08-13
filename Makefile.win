@@ -1,0 +1,31 @@
+# Project: IndoorNavigation
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o readCSVFile.o
+LINKOBJ  = main.o readCSVFile.o
+LIBS     = -L"C:/software/Dev-Cpp/MinGW64/lib" -L"C:/software/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/software/Dev-Cpp/MinGW64/include" -I"C:/software/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/software/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/software/Dev-Cpp/MinGW64/include" -I"C:/software/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/software/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/software/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = IndoorNavigation.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+readCSVFile.o: readCSVFile.c
+	$(CC) -c readCSVFile.c -o readCSVFile.o $(CFLAGS)

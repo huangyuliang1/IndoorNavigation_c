@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1562512324 source:d:\workspase\indoornavigation_c\readcsvfile.c
+	"readCSVFile.h"
+
+1562491068 d:\workspase\indoornavigation_c\readcsvfile.h
+	<stdio.h>
+	<memory.h>
+	<stdlib.h>
+	<string.h>
+
+1562512622 source:d:\workspase\indoornavigation_c\main.c
+	"readCSVFile.h"
+	"wknnAlgorithm.h"
+
+1562509010 d:\workspase\indoornavigation_c\wknnalgorithm.h
+
+1562508815 source:d:\workspase\indoornavigation_c\wknnalgorithm.c
+	"readCSVFile.h"
+	"wknnAlgorithm.h"
+	<math.h>
+	<assert.h>
+
